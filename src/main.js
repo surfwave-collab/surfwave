@@ -403,8 +403,9 @@ function openDetails(product) {
         </div>
         <p class="detail-description">${escapeHTML(product.description || t.noDescription)}</p>
         ${sold 
-          ? `<p class="sold-note">${escapeHtml(t.soldNote)}</p>` 
-          : `<a class="order-button" href="${escapeHtml(instagramUrl)}" target="_blank" rel="noreferrer">สั่งซื้อสินค้า</a>`}
+            ? `<p class="sold-note">${escapeHtml(t.soldNote)}</p>` 
+            : `<a class="order-button" href="${escapeHtml(instagramUrl)}" target="_blank" rel="noreferrer">สั่งซื้อสินค้า</a>`
+        }
         
 
 
