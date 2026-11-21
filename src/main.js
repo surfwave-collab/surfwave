@@ -370,12 +370,12 @@ function openDetails(product) {
     .map(safeImageUrl)
     .filter(Boolean)
 
-  const mainImage = images[0] || 'https://placehold.co/700x850?text=SurfWave'
-  const sold = isSold(product)
-  const username = INSTAGRAM_USERNAME.replace(/^@/, '')
-  const instagramUrl = `https://ig.me/m/${username}`;
-  const productUrl = window.location.href.split('#')[0] + '#item-' + encodeURIComponent(product.id || '')
-  const message = t.orderMsg(product.name || '', product.id || '', productUrl)
+const mainImage = images[0] || 'https://placeholder.co/700x850?text=SurfWave';
+const sold = isSold(product);
+const username = INSTAGRAM_USERNAME.replace(/^@/, '');
+const productUrl = window.location.href.split('#')[0] + '#item-' + encodeURIComponent(product.id || '');
+const message = t.orderMsg(product.name || '', product.id || '', productUrl);
+const instagramUrl = `https://ig.me/m/${encodeURIComponent(username)}?text=${encodeURIComponent(message)}`;
 
   content.innerHTML = `
     <div class="detail-layout">
@@ -402,16 +402,20 @@ function openDetails(product) {
           <p><strong>${t.statusLabel}</strong><span>${sold ? t.soldStatus : t.availableStatus}</span></p>
         </div>
         <p class="detail-description">${escapeHTML(product.description || t.noDescription)}</p>
-        ${sold 
-            ? `<p class="sold-note">${escapeHtml(t.soldNote)}</p>` 
-            : `<a class="order-button" href="${escapeHtml(instagramUrl)}" target="_blank" rel="noreferrer">สั่งซื้อสินค้า</a>`
-        }
-        
 
-
+        ${sold
+          ? `<p class="sold-note">${t.soldNote}</p>`
+          : `
+            <a class="order-button" href="${escapeHTML(instagramUrl)}"
+               target="_blank" rel="noreferrer">${t.orderButton}</a>
+            <p class="copy-hint">${t.copyHint}</p>
+            <textarea id="orderMessage" readonly>${escapeHTML(message)}</textarea>
+            <button id="copyMessage" class="copy-button" type="button">${t.copyButton}</button>
+            <p id="copyStatus" class="copy-status" aria-live="polite"></p>
+          `}
       </div>
     </div>
-  
+  `
 
   content.querySelectorAll('[data-photo]').forEach((button) => {
     button.addEventListener('click', () => {
