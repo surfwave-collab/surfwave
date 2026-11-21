@@ -373,7 +373,7 @@ function openDetails(product) {
   const mainImage = images[0] || 'https://placehold.co/700x850?text=SurfWave'
   const sold = isSold(product)
   const username = INSTAGRAM_USERNAME.replace(/^@/, '')
-  const instagramUrl = `https://ig.me/m/${encodeURIComponent(username)}?text=${encodeURIComponent(message + ' ลิงก์สินค้า: ' + productUrl)}`;
+
   const productUrl = window.location.href.split('#')[0] + '#item-' + encodeURIComponent(product.id || '')
   const message = t.orderMsg(product.name || '', product.id || '', productUrl)
 
