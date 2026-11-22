@@ -366,9 +366,14 @@ function openDetails(product) {
   const dialog = document.querySelector('#detailDialog')
   const content = document.querySelector('#dialogContent')
 
-  const images = [product.image1, product.image2, product.image3]
-    .map(safeImageUrl)
-    .filter(Boolean)
+  const images = [
+    product.image1,
+    product.image2,
+    product.image3,
+    product.image4,
+    product.image5
+  ].map(safeImageUrl).filter(Boolean);
+
 
 const mainImage = images[0] || 'https://placeholder.co/700x850?text=SurfWave';
 const sold = isSold(product);
