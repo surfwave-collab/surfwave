@@ -122,10 +122,10 @@ const app = document.querySelector('#app')
 let products = []
 
 const categoryImages = {
-  'all': 'https://media.discordapp.net/attachments/1573650314857422858/1573703405862387782/7ce9f3091f0b7724f4a403f658cd1900.png?ex=6b02f901&is=6b01a781&hm=b0352dd4151607f024bede464f9973b1a3534734ec1d239e864233da234bd635&format=webp&quality=lossless&width=315&height=350',
-  'Boardshorts': 'https://media.discordapp.net/attachments/1573650314857422858/1573703146147152042/723976959_18089096168119062_8182039262938932493_n.png?ex=6b02f8c4&is=6b01a744&hm=1e78b414facdc5d4eb79884d0ad526c4b9cca86b07a57dbbde2ce8d5b8c3bc15&format=webp&quality=lossless&width=784&height=784',
-  'T-SHIRT': 'https://media.discordapp.net/attachments/1573650314857422858/1573702762904953004/900634902_18109545605119062_1945479826964785950_n.png?ex=6b02f868&is=6b01a6e8&hm=e678a5beed0a19f41837da543acca337ca2b537d44a0b51388576296eac50ef9&format=webp&quality=lossless&width=588&height=784',
-  'SWEATSHIRTS': 'https://media.discordapp.net/attachments/1573650314857422858/1573712483674230804/755390438_18094805393119062_8801441992495232438_n.png?ex=6b030176&is=6b01aff6&hm=021c023b88cab4682fd0afc85fa3a011f5b3792890bb88eaae2dc896e6b0d663&format=webp&quality=lossless&width=588&height=784',
+  'all': 'https://upmage.synw.xyz/f/054b3b7ab86ca6cce7f3b636c481ed1c',
+  'Boardshorts': 'https://upmage.synw.xyz/f/3d1f398f202943052824fc8cc6351eff',
+  'T-SHIRT': 'https://upmage.synw.xyz/f/19df37cfce91a2440dc119bd3103c965',
+  'SWEATSHIRTS': 'https://upmage.synw.xyz/f/4b57a3c1094c0419f0bba84d5193ead4',
 
 }
 
